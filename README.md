@@ -32,10 +32,10 @@ Follow these steps:
 
 ```sh
 # Step 1: Clone the repository using the project's Git URL.
-git clone <>
+git clone <https://github.com/Dh4nu5hwebdev/gamify-code-learn-main.git>
 
 # Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+cd <gamify-code-learn-main.git>
 
 # Step 3: Install the necessary dependencies.
 npm i
