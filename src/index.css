@@ -1,0 +1,157 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    /* Gamified Learning Platform - Dark Theme Design System */
+    
+    /* Primary Deep Purple Theme */
+    --primary: 265 67% 55%; /* Deep Purple #7E57C2 */
+    --primary-foreground: 0 0% 100%;
+    --primary-hover: 265 67% 45%;
+    --primary-glow: 265 67% 70%;
+    
+    /* Dark Background System */
+    --background: 240 10% 3.9%; /* Rich Dark */
+    --foreground: 0 0% 98%;
+    
+    --card: 240 10% 8%;
+    --card-foreground: 0 0% 98%;
+    
+    --popover: 240 10% 8%;
+    --popover-foreground: 0 0% 98%;
+    
+    /* Secondary Colors for Gamification */
+    --secondary: 240 4.8% 15%;
+    --secondary-foreground: 0 0% 98%;
+    
+    --muted: 240 5% 12%;
+    --muted-foreground: 240 5% 64%;
+    
+    --accent: 265 67% 55%;
+    --accent-foreground: 0 0% 100%;
+    
+    /* Success/Progress Colors */
+    --success: 142 76% 36%;
+    --success-foreground: 0 0% 100%;
+    
+    /* Warning/Level Colors */
+    --warning: 38 92% 50%;
+    --warning-foreground: 0 0% 100%;
+    
+    /* Destructive */
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+    
+    /* Borders and Inputs */
+    --border: 240 6% 20%;
+    --input: 240 6% 15%;
+    --ring: 265 67% 55%;
+    
+    /* Gamification Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--primary-glow)));
+    --gradient-success: linear-gradient(135deg, hsl(var(--success)), hsl(142 76% 50%));
+    --gradient-card: linear-gradient(135deg, hsl(var(--card)), hsl(240 10% 12%));
+    
+    /* XP and Achievement Colors */
+    --xp-bronze: 30 100% 50%;
+    --xp-silver: 0 0% 75%;
+    --xp-gold: 45 100% 50%;
+    --xp-diamond: 195 100% 75%;
+    
+    /* Shadows and Glows */
+    --shadow-glow: 0 0 40px hsl(var(--primary) / 0.3);
+    --shadow-card: 0 4px 20px hsl(240 10% 2% / 0.8);
+    
+    --radius: 0.75rem;
+    
+    /* Animation Variables */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --bounce-spring: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+@layer components {
+  /* Gamification Components */
+  .progress-ring {
+    @apply relative inline-flex items-center justify-center;
+  }
+  
+  .progress-ring::before {
+    @apply absolute inset-0 rounded-full bg-gradient-to-r from-primary to-primary-glow opacity-20;
+    content: '';
+  }
+  
+  .xp-badge {
+    @apply inline-flex items-center gap-2 px-3 py-1 rounded-full text-sm font-medium;
+    background: var(--gradient-primary);
+    box-shadow: var(--shadow-glow);
+  }
+  
+  .achievement-glow {
+    @apply relative;
+    box-shadow: 0 0 20px hsl(var(--primary) / 0.4);
+    animation: pulse-glow 2s ease-in-out infinite alternate;
+  }
+  
+  .module-card {
+    @apply relative overflow-hidden rounded-xl border border-border/50;
+    background: var(--gradient-card);
+    box-shadow: var(--shadow-card);
+    transition: var(--transition-smooth);
+  }
+  
+  .module-card:hover {
+    @apply border-primary/30 scale-[1.02];
+    box-shadow: var(--shadow-glow);
+  }
+  
+  .skill-path {
+    @apply relative;
+  }
+  
+  .skill-path::before {
+    @apply absolute left-6 top-12 -bottom-6 w-0.5 bg-gradient-to-b from-primary to-transparent;
+    content: '';
+  }
+}
+
+@layer utilities {
+  .text-gradient {
+    @apply bg-gradient-to-r from-primary to-primary-glow bg-clip-text text-transparent;
+  }
+  
+  .bg-gradient-primary {
+    background: var(--gradient-primary);
+  }
+  
+  .bg-gradient-success {
+    background: var(--gradient-success);
+  }
+}
+
+@keyframes pulse-glow {
+  0% { box-shadow: 0 0 20px hsl(var(--primary) / 0.4); }
+  100% { box-shadow: 0 0 30px hsl(var(--primary) / 0.6); }
+}
+
+@keyframes level-up {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+  100% { transform: scale(1); }
+}
