@@ -1,18 +1,26 @@
-# Welcome to your Lovable project
+🌍 EchoLearn
 
-## Project info
+Gamified Environmental Education Platform for Schools and Colleges
 
-**URL**: https://lovable.dev/projects/a9bd0753-2641-49fc-9d7b-4392372105f7
+EchoLearn is an interactive web platform designed to make environmental education fun, engaging, and impactful. Through gamification, students can learn about sustainability, conservation, and eco-friendly practices while earning rewards, completing challenges, and collaborating with peers.
+
+📌 Project Info
+
+🎯 Problem Statement: Traditional environmental education often struggles to engage students. EchoLearn solves this by integrating gamification principles into learning, making education both enjoyable and impactful.
+
+🏫 Target Audience: Schools, colleges, and educational institutions.
+
+⚡ Goal: To promote eco-conscious behavior through interactive learning modules, challenges, and progress tracking.
+
+
+
 
 ## How can I edit this code?
 
 There are several ways of editing your application.
 
-**Use Lovable**
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/a9bd0753-2641-49fc-9d7b-4392372105f7) and start prompting.
 
-Changes made via Lovable will be committed automatically to this repo.
 
 **Use your preferred IDE**
 
@@ -24,7 +32,7 @@ Follow these steps:
 
 ```sh
 # Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+git clone <>
 
 # Step 2: Navigate to the project directory.
 cd <YOUR_PROJECT_NAME>
@@ -41,6 +49,19 @@ npm run dev
 - Navigate to the desired file(s).
 - Click the "Edit" button (pencil icon) at the top right of the file view.
 - Make your changes and commit the changes.
+🧑‍💻 Tech Stack
+
+This project is built with modern web technologies:
+
+⚡ Vite → Lightning-fast build tool
+
+⚛️ React → Component-based UI framework
+
+🟦 TypeScript → Strongly typed JavaScript
+
+🎨 Tailwind CSS → Utility-first CSS framework
+
+🧩 shadcn-ui → Accessible and beautiful UI components
 
 **Use GitHub Codespaces**
 
@@ -60,14 +81,12 @@ This project is built with:
 - shadcn-ui
 - Tailwind CSS
 
-## How can I deploy this project?
+🌱 Vision
 
-Simply open [Lovable](https://lovable.dev/projects/a9bd0753-2641-49fc-9d7b-4392372105f7) and click on Share -> Publish.
+EchoLearn’s vision is to create eco-aware global citizens by transforming learning into an immersive journey that combines knowledge, challenges, and impact.
 
-## Can I connect a custom domain to my Lovable project?
+🤝 Contributing
 
-Yes, you can!
+We welcome contributions! Feel free to fork the repo, create a branch, and submit a pull request with your improvements.
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
